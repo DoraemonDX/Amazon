@@ -1,36 +1,55 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <p>
-        If Element is successfully added to this project, you'll see an
-        <code v-text="'<el-button>'"></code>
-        below
-      </p>
-      <el-button>el-button</el-button>
-    </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <el-container>
+      <el-header>
+        <Top></Top>
+      </el-header>
+      <el-main>
+        <subcontextheader></subcontextheader>
+        <subcontext title="注册公司"></subcontext>
+        <subcontext02></subcontext02>
+        <subcontext03></subcontext03>
+        <subcontext04></subcontext04>
+      </el-main>
+
+      <el-footer>
+        <Buttom></Buttom>
+      </el-footer>
+    </el-container>
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import subcontext from "./components/sub/subcontext";
+import Subcontext02 from "./components/sub/subcontext02";
+import Subcontext03 from "./components/sub/subcontext03";
+import Subcontext04 from "./components/sub/subcontext04";
+import Subcontextheader from "./components/sub/subcontextheader";
+import Top from "./components/sub/top";
+import Buttom from "./components/sub/buttom";
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Buttom,
+    Top,
+    Subcontextheader,
+    Subcontext04,
+    Subcontext03,
+    Subcontext02,
+    subcontext,
+
   }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
