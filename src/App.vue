@@ -51,5 +51,7 @@ export default {
 <style lang="less" scoped>
 #app {
   text-align: center;
+  width:  1920px;
+
 }
 </style>
